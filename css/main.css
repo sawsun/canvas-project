@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+}
+
+nav{
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    border: 1px solid #000;
+    border-top : none;
+    box-shadow: 4px 5px 2px 1px rgba(0, 0, 255, .2);
+}
+
+nav > *:not(:last-child){
+    margin-right: 10%;
+}
+
+input{
+    height:25px;
+}
+
+.shape{
+    height: 25px;
+}
+
+#canvas{
+    border: 1px solid gray;
+    cursor: crosshair;
+}

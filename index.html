@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>My Canvas</title>
+</head>
+<body onload="init()">
+<nav>
+    <!-- color input -->
+    <input type="color" name ="canvasBGcolor" value="#fdffff" onchange="changeColor(this.value)"/>
+
+    <!-- shape -->
+    <div>
+        <select name = "shape" onchange="onUpdateShape(this.value)" class="shape">
+            <option>Select Shape</option>
+            <option value = "circle">Circle</option>
+            <option value = "square">Square</option>
+            <option value = "traingle">Traingle</option>
+            <option value = "mCircles">multiCircles</option>
+            <option value = "line">line</option>
+        </select>
+    </div>
+
+    <!-- save -->
+
+    <button name = "save" class="save"><a onclick="downloadCanvas(this)">Save</a></button>
+
+    <!-- clear -->
+
+    <button name = "clear" class="clear" onclick="clearCanvas()">Clear</button>
+
+</nav>
+
+<canvas id = "canvas" onmousemove="drawShape(event)" onmousedown="handleMouseDown(event)"></canvas>
+<script src="js/util.js"></script> 
+<script src="js/main.js"></script> 
+</body>
+</html>
